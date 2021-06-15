@@ -1,5 +1,9 @@
 let resultado;
 let operacion;
+let a;
+let b;
+
+let activador;
 function add(a, b) {
 
     resultado = a + b;
@@ -34,13 +38,48 @@ function operador(a, b) {
     }
     console.log(operacion)
 }
+
+function signos(operator) {
+
+    operacion = `${operator}`
+    console.log(operacion);
+
+    activador = 'si';
+
+}
+const suma = document.querySelector('#suma');
+suma.addEventListener('click', () => { signos(`sum`) })
+
+const resta = document.querySelector('#resta');
+resta.addEventListener('click', () => { signos(`rest`) })
+
+const multiplicacion = document.querySelector('#mult');
+multiplicacion.addEventListener('click', () => { signos(`mult`) })
+
+const division = document.querySelector('#divi');
+division.addEventListener('click', () => { signos(`divi`) })
+
+const igual = document.querySelector('#igual');
+igual.addEventListener('click', () => { operador() });
+
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', () => {
+    location.reload()
+})
 const pantalla = document.querySelector('#screen');
 
-let display = '';
+let primerNumero = '';
+let segundoNumero = '';
 
 function addNumero(numero) {
-    display += `${numero}`;
-    console.log(display);
+    if (activador == "si") {
+        segundoNumero += `${numero}`;
+    }
+    else {
+        primerNumero += `${numero}`;
+    }
+    console.log(primerNumero);
+    console.log(segundoNumero);
     const num = document.createElement('p');
     num.textContent = `${numero}`
     pantalla.appendChild(num);
@@ -75,24 +114,3 @@ cero.addEventListener('click', () => { addNumero(0) });
 
 const decimal = document.querySelector('#decimal');
 decimal.addEventListener('click', () => { addNumero(".") });
-
-function signos(operator) {
-
-    operacion = `${operator}`
-    console.log(operacion);
-    console.log(a);
-}
-const suma = document.querySelector('#suma');
-suma.addEventListener('click', () => { signos(`sum`) })
-
-const resta = document.querySelector('#resta');
-resta.addEventListener('click', () => { signos(`rest`) })
-
-const multiplicacion = document.querySelector('#mult');
-multiplicacion.addEventListener('click', () => { signos(`mult`) })
-
-const division = document.querySelector('#divi');
-division.addEventListener('click', () => { signos(`divi`) })
-
-const igual = document.querySelector('#igual');
-igual.addEventListener('click', () => { operador() });
