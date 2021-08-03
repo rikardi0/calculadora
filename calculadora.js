@@ -19,13 +19,15 @@ function addNumber(number) {
         secondNumber += `${number}`;
         secondNum.textContent += `${number}`;
         screen.removeChild(sign);
-
-
+        
+   
     }
     else if (changeNumber !== "si") {
         firstNumber += `${number}`;
         firstNum.textContent += `${number}`;
+        
     }
+   
 };
 function defineOperator() {
     if (equalCont > 1) {

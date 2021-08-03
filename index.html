@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     @font-face {
         font-family: 'calculator';
         src: url("calculator/Calculator.ttf");
     }
-
+    
     @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Quantico&family=VT323&display=swap');
-
     body {
-        background: rgb(233, 203, 181);
+        background-color: #523c1f;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23000000' fill-opacity='0.17' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-
+    
     #main {
         display: grid;
         grid-template-columns: repeat(3, 35px) repeat(2, 1fr);
@@ -20,7 +21,7 @@
         grid-row-gap: 10px;
         margin-top: 10px;
     }
-
+    
     #screen {
         font-family: 'calculator';
         font-size: 35px;
@@ -34,15 +35,13 @@
         padding-right: 8px;
         bottom: 15px;
         margin: auto;
-
         width: 225px;
         height: 80px;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-
     }
-
+    
     button {
         font-size: 25px;
         height: 40px;
@@ -56,24 +55,21 @@
         border-color: rgb(8, 8, 8);
         outline: none;
     }
-
+    
     button:hover {
-
         height: 39px;
         border-bottom-width: 0.5px;
         border-left-width: 0.5px;
         border-right-width: 0.5px;
-
-
     }
-
+    
     .result {
         background-color: rgb(255, 60, 0);
         border-color: rgb(219, 70, 1);
         color: black;
         font-weight: bolder;
     }
-
+    
     #calc {
         position: relative;
         top: 50px;
@@ -93,7 +89,7 @@
         border-right-width: 3px;
         border-color: rgb(0, 0, 0);
     }
-
+    
     #igual {
         width: 170px;
         background: rgb(21, 25, 88);
@@ -142,7 +138,6 @@
         </div>
     </div>
     <script src="calculadora.js">
-
     </script>
 </body>
 
